@@ -38,3 +38,4 @@ rs.initiate(
 ```
 Step 5:
 
+You can now interact with both Vault and Consul. View the UIs at http://localhost:8200/ui and http://localhost:8500/ui.
