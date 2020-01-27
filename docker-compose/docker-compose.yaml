@@ -30,7 +30,7 @@ services:
       - 27013:27017
     restart: always
     entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
- vault:
+  vault:
     build:
       context: ./vault
       dockerfile: Dockerfile
