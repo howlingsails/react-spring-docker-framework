@@ -1,0 +1,24 @@
+alive: 032b785e6fc8 172.18.0.4:8301
+alive: e20f9c406cf6 172.18.0.6:8301
+clock: 1
+event-clock: 1
+event-clock: 2
+alive: 15662f2ea090 172.18.0.4:8301
+alive: fe2234a045e0 172.18.0.7:8301
+clock: 2
+alive: 99eb87f2a085 172.18.0.4:8301
+alive: 0951783b273c 172.18.0.6:8301
+clock: 3
+event-clock: 3
+alive: 1fe391df96e2 172.18.0.2:8301
+alive: 88c3d3751522 172.18.0.6:8301
+clock: 4
+event-clock: 4
+alive: 7ac408fe9d0e 172.18.0.2:8301
+alive: 3608f340d8f3 172.18.0.6:8301
+clock: 5
+event-clock: 5
+alive: 161a3fd40e36 172.18.0.2:8301
+alive: c3fbb02a85fd 172.18.0.6:8301
+clock: 6
+event-clock: 6
