@@ -16,6 +16,13 @@ add alias -]:-) use any alias you like..
 ```.bash_profile => .bash_command
 alias buildLocalCloud="cd docker-compose;docker-compose up -d"
 ``` 
+# To Reset the Development Infrastructure
+## WARNING: You will loose all docker configuration 
+```bash 
+docker-compose rm -s -v
+docker volume prune
+```
+
 
 ## Setup Development Infrastructure
 
@@ -37,4 +44,28 @@ Vault requires a split key for auth  // TODO: figure out a production implementa
  
  ![](images/vaultStartSetup.png)
  
+ #### Setup mongo databases
+  
+ access mongo console
+ 
+ ```bash
+ mongo
+ ```
+ 
+ 
+ #### Configure replica
+ Run in mongo Console
+ ```mongo command        
+ rs.initiate(
+   {
+     _id : 'rs0',
+     members: [
+       { _id : 0, host : "mongo1:27017" },
+       { _id : 1, host : "mongo2:27017" },
+       { _id : 2, host : "mongo3:27017" }
+     ]
+   }
+ )
+ ```
+
  
