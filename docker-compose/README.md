@@ -1,16 +1,54 @@
+# Application Infrastructure Build / Deploy
 
+## Services and work todo
 
+[x] Console ~high Available
 
-Step 1: start the mongo databases
+[x] Vault Since Service
+
+[  ] MongoDB High Available
+
+[  ] _Certificate Authority
+
+[  ] _SpringBoot Service
+
+[  ] _NextJS Web Framework
+
+## Launching Infrastructure
 
 ```bash
-docker-compose up
-or
-```bash
+cd docker-compose
 docker-compose up -d
 ```
+add alias -]:-) use any alias you like..
+```.bash_profile => .bash_command
+alias buildLocalCloud="cd docker-compose;docker-compose up -d"
+``` 
+# To Reset the Development Infrastructure
+## WARNING: You will loose all docker configuration 
+```bash 
+docker-compose rm -s -v
+docker volume prune
+```
 
-Step 2 (command lineoption) : exec into one of the mongos:
+
+# MongoDB
+
+## Goals
+
+[x] Replica set
+
+[ ] Set and Store Admin Password in Vault
+
+[ ] Vault plugin for user/password rotation
+
+[ ] Utilize in SpringBoot
+
+## First Run Setup
+
+After the infrastructure is launched a few steps  
+
+Step 1 (command line option) : exec into one of the mongos:
 
 ```bash
 docker exec -it localmongo1 /bin/bash
@@ -25,7 +63,7 @@ mongo
 ```
 
 
-Step 4: configure replica set by pasting the following
+Step 4: configure replica set by pasting the following into the mongo commandline
 
 ```mongo command        
 rs.initiate(

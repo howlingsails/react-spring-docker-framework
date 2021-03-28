@@ -5,5 +5,11 @@
   "ui": true,
   "ports": {
     "dns": 53
+  },
+  "acl": {
+  "enabled": true,
+  "default_policy": "deny",
+  "enable_token_persistence": true
   }
+  
 }

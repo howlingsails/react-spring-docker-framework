@@ -33,23 +33,7 @@ docker-compose local development
 mongo (app data)
 vault (security)
 
-# To Run Development Infrastructure
-
-```bash
-cd docker-compose
-docker-compose up -d
-```
-add alias -]:-) use any alias you like..
-```.bash_profile => .bash_command
-alias buildLocalCloud="cd docker-compose;docker-compose up -d"
-``` 
-# To Reset the Development Infrastructure
-## WARNING: You will loose all docker configuration 
-```bash 
-docker-compose rm -s -v
-docker volume prune
-```
-
+## Add lINK TO DOCKER-COMPOSE README
 
 ## Setup Development Infrastructure
 
