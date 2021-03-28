@@ -1,7 +1,34 @@
 # react-spring-docker-framework
 
-Prototype implementation of a framework
-using reactui, java springboot back end
+# Summary
+
+Prototype implementation of a completed development framework
+
+# Key Goals
+
+* Security
+
+* Repeatability
+
+* Constant Patching 
+
+* Automated Testing
+
+* Partitioning
+
+* Accessible
+
+* Maintained Open Source  
+
+## Security
+
+All communications between nodes will be encrypted using rotating two=factor authorization and authentication.
+
+
+
+
+using reactui, 
+java springboot back end
 docker-compose local development
 mongo (app data)
 vault (security)

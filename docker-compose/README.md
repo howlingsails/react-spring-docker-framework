@@ -1,3 +1,6 @@
+
+
+
 Step 1: start the mongo databases
 
 ```bash
