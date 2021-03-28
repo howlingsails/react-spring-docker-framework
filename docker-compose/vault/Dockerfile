@@ -2,7 +2,8 @@
 FROM alpine:3.7
 
 # set vault version
-ENV VAULT_VERSION 0.10.3
+ENV VAULT_VERSION 1.7.0
+ENV VAULT_URL "https://releases.hashicorp.com/vault"
 
 # create a new directory
 RUN mkdir /vault
@@ -14,6 +15,8 @@ RUN apk --no-cache add \
       wget
 
 # download and set up vault
+# https://learn.hashicorp.com/tutorials/vault/deployment-guide
+
 RUN wget --quiet --output-document=/tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip && \
     unzip /tmp/vault.zip -d /vault && \
     rm -f /tmp/vault.zip && \
