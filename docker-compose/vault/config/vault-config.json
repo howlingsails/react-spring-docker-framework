@@ -6,15 +6,14 @@
     }
   },
   "listener": {
-    "tcp":{
+    "tcp": {
       "address": "[::]:8200",
-      "cluster_address": "[::]",
-      "tls_disable": 0,
+      "cluster_address": "[::]:8201",
+      "tls_disable": 1,
       "tls_min_version": "tls13",
-      "tls_cert_file": "",
+      "tls_cert_file": "vault-key.pem",
       "tls_key_file": "vault-key.pem",
-      "tls_require_and_verify_client_cert": true
-
-    },
-  "ui": true
+      "tls_require_and_verify_client_cert": false
+    }
+  }
 }

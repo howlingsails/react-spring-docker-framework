@@ -31,6 +31,7 @@ services:
     restart: always
     entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
   vault:
+    container_name: "vault"
     build:
       context: ./vault
       dockerfile: Dockerfile
@@ -49,6 +50,7 @@ services:
     depends_on:
       - consul
   consul:
+    container_name: "consul"
     build:
       context: ./consul
       dockerfile: Dockerfile
@@ -59,6 +61,7 @@ services:
       - ./consul/config/consul-config.json:/consul/config/config.json
       - ./consul/data:/consul/data
   consul-worker:
+    container_name: "consul_worker"
     build:
       context: ./consul
       dockerfile: Dockerfile
@@ -68,10 +71,11 @@ services:
     depends_on:
       - consul
   management1:
+    container_name: mysql-mgmt
     image: mysql/mysql-cluster
     volumes:
-      - ./mysql.conf/my.cnf:/etc/my.cnf
-      - ./mysql.conf/mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./cluster-mysql/config/my.cnf:/etc/my.cnf
+      - ./cluster-mysql/config/mysql-cluster.cnf:/etc/mysql-cluster.cnf
     #command: "ndb_mgmd --ndb-nodeid=1"
     command: ndb_mgmd
     networks:
@@ -79,10 +83,11 @@ services:
         #        ipv4_address: 192.168.0.2
         ipv4_address: 172.28.0.2
   ndb1:
+    container_name: "ndb1"
     image: mysql/mysql-cluster
     volumes:
-      - ./mysql.conf/my.cnf:/etc/my.cnf
-      - ./mysql.conf/mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./cluster-mysql/config/my.cnf:/etc/my.cnf
+      - ./cluster-mysql/config/mysql-cluster.cnf:/etc/mysql-cluster.cnf
     #command: bash -c 'sleep 40; exec ndbd'
     command: ndbd
     depends_on:
@@ -92,10 +97,11 @@ services:
         #        ipv4_address: 192.168.0.3
         ipv4_address: 172.28.0.3
   ndb2:
+    container_name: "ndb2"
     image: mysql/mysql-cluster
     volumes:
-      - ./mysql.conf/my.cnf:/etc/my.cnf
-      - ./mysql.conf/mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./cluster-mysql/config/my.cnf:/etc/my.cnf
+      - ./cluster-mysql/config/mysql-cluster.cnf:/etc/mysql-cluster.cnf
     #command: bash -c 'sleep 40; exec ndbd'
     command: ndbd
     depends_on:
@@ -105,12 +111,13 @@ services:
         #        ipv4_address: 192.168.0.4
         ipv4_address: 172.28.0.4
   mysql1:
+    container_name: "mysql1"
     image: mysql/mysql-cluster
     ports:
       - "3306:3306"
     volumes:
-      - ./mysql.conf/my.cnf:/etc/my.cnf
-      - ./mysql.conf/mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./cluster-mysql/config/my.cnf:/etc/my.cnf
+      - ./cluster-mysql/config/mysql-cluster.cnf:/etc/mysql-cluster.cnf
     #    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
@@ -129,6 +136,7 @@ services:
         #        ipv4_address: 192.168.0.10
         ipv4_address: 172.28.0.10
   adminer:
+    container_name: "adminer"
     image: adminer
     restart: always
     ports:
