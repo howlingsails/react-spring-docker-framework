@@ -17,15 +17,15 @@
 ## Launching Infrastructure
 
 ```bash
-cd docker-compose
 docker-compose up -d
 ```
 add alias -]:-) use any alias you like..
 ```.bash_profile => .bash_command
-alias buildLocalCloud="cd docker-compose;docker-compose up -d"
+alias buildLocalCloud="docker-compose up -d "
 ``` 
 # To Reset the Development Infrastructure
-## WARNING: You will loose all docker configuration 
+### WARNING:
+### You will loose all current docker configuration and setup 
 ```bash 
 docker-compose rm -s -v
 docker volume prune
@@ -48,23 +48,26 @@ docker volume prune
 
 After the infrastructure is launched a few steps  
 
-Step 1 (command line option) : exec into one of the mongos:
+**Step ?:** Create Certificates For Installations
+
+Create Certificates For ALl Systems and copy them to the machines installation directories.
+
+**Step 1:** (command line option) : exec into one of the mongos:
 
 ```bash
 docker exec -it localmongo1 /bin/bash
 ```
-Step 2 ()
+**Step 2:**
 
 
-Step 3: access mongo console
+**Step 3:** access mongo console
 
 ```bash
 mongo
 ```
 
 
-Step 4: configure replica set by pasting the following into the mongo commandline
-
+**Step 4:** configure replica set by pasting the following into the mongo commandline
 ```mongo command        
 rs.initiate(
   {
@@ -77,6 +80,15 @@ rs.initiate(
   }
 )
 ```
-Step 5:
+**Step 5:**
 
-You can now interact with both Vault and Consul. View the UIs at http://localhost:8200/ui and http://localhost:8500/ui.
+You can now interact with both Vault and Consul. 
+View the UIs at 
+
+**Vault**
+
+[http://localhost:8200/ui](http://localhost:8200/ui) 
+
+**Consol**
+
+[http://localhost:8500/ui](http://localhost:8500/ui).

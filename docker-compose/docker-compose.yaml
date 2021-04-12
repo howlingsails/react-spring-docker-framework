@@ -37,6 +37,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8200:8200
+      - 8201:8201
     volumes:
       - ./vault/config:/vault/config
       - ./vault/policies:/vault/policies
