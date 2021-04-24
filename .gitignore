@@ -24,3 +24,4 @@
 hs_err_pid*
 /docker-compose/consul/data/
 /docker-compose/vault/data/
+!/infrastructure/vault/config/vault-key.pem

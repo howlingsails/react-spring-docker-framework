@@ -1,0 +1,71 @@
+alive: 032b785e6fc8 172.18.0.4:8301
+alive: e20f9c406cf6 172.18.0.6:8301
+clock: 1
+event-clock: 1
+event-clock: 2
+alive: 15662f2ea090 172.18.0.4:8301
+alive: fe2234a045e0 172.18.0.7:8301
+clock: 2
+alive: 99eb87f2a085 172.18.0.4:8301
+alive: 0951783b273c 172.18.0.6:8301
+clock: 3
+event-clock: 3
+alive: 1fe391df96e2 172.18.0.2:8301
+alive: 88c3d3751522 172.18.0.6:8301
+clock: 4
+event-clock: 4
+alive: 7ac408fe9d0e 172.18.0.2:8301
+alive: 3608f340d8f3 172.18.0.6:8301
+clock: 5
+event-clock: 5
+alive: 161a3fd40e36 172.18.0.2:8301
+alive: c3fbb02a85fd 172.18.0.6:8301
+clock: 6
+event-clock: 6
+alive: 023717eb9694 172.19.0.2:8301
+alive: bac157119d52 172.19.0.6:8301
+clock: 1
+event-clock: 1
+alive: 53f12347c61e 172.19.0.2:8301
+alive: 015eaede13dd 172.19.0.6:8301
+clock: 2
+event-clock: 2
+alive: 38800d765507 172.19.0.2:8301
+alive: 583a70d5deaf 172.19.0.6:8301
+clock: 3
+event-clock: 3
+alive: f9c945f0058b 172.19.0.2:8301
+alive: ab139b053148 172.19.0.7:8301
+clock: 4
+alive: 559dbd8d8a7a 172.19.0.5:8301
+alive: 2c743df61d44 172.19.0.6:8301
+clock: 5
+event-clock: 4
+event-clock: 5
+event-clock: 6
+event-clock: 7
+event-clock: 8
+event-clock: 9
+event-clock: 10
+event-clock: 11
+alive: 66a8ce1a20e9 172.19.0.5:8301
+alive: a24d91a6d901 172.19.0.6:8301
+clock: 6
+event-clock: 12
+not-alive: a24d91a6d901
+alive: 08e412266e3a 172.19.0.2:8301
+alive: 6fb1897fdc13 172.19.0.6:8301
+clock: 7
+event-clock: 13
+not-alive: 6fb1897fdc13
+alive: 7439ed65310f 172.19.0.4:8301
+alive: a53ffbfa1897 172.19.0.6:8301
+clock: 8
+event-clock: 14
+alive: a6ae5fae32f3 172.19.0.5:8301
+alive: 57f677414c9c 172.19.0.6:8301
+clock: 9
+event-clock: 15
+event-clock: 16
+event-clock: 17
+event-clock: 18
