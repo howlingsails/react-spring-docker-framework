@@ -17,58 +17,62 @@
 ## Launching Infrastructure
 
 ```bash
-docker-compose up -d
+
+docker-compose up -d -V
+
 ```
-add alias -]:-) use any alias you like..
-```.bash_profile => .bash_command
-alias buildLocalCloud="docker-compose up -d "
-``` 
-# To Reset the Development Infrastructure
-### WARNING:
-### You will loose all current docker configuration and setup 
+
+### To Reset the Development Infrastructure
+#### WARNING:
+#### You will loose all current docker configuration and setup 
+
 ```bash 
+
 docker-compose rm -s -v
+
 docker volume prune
+
 ```
-
-
-# MongoDB
-
-## Goals
-
-[x] Replica set
-
-[ ] Set and Store Admin Password in Vault
-
-[ ] Vault plugin for user/password rotation
-
-[ ] Utilize in SpringBoot
 
 ## First Run Setup
 
 After the infrastructure is launched a few steps  
 
-**Step ?:** Create Certificates For Installations
+* *Step ?:** Create Certificates For Installations
 
 Create Certificates For ALl Systems and copy them to the machines installation directories.
 
-**Step 1:** (command line option) : exec into one of the mongos:
+* *Step 1:** (command line option) : exec into one of the mongos:
 
+Linux/MacOs
 ```bash
 docker exec -it localmongo1 /bin/bash
 ```
+windows
+```bash 
+winpty docker exec -it localmongo1 /bin/bash
+```
+
+Or User Docker Desktop CLI option on Mongo1
+
 **Step 2:**
 
+??
 
 **Step 3:** access mongo console
 
 ```bash
+
 mongo
+
 ```
 
 
 **Step 4:** configure replica set by pasting the following into the mongo commandline
-```mongo command        
+
+
+``` mongo script    
+    
 rs.initiate(
   {
     _id : 'rs0',
@@ -79,6 +83,7 @@ rs.initiate(
     ]
   }
 )
+
 ```
 **Step 5:**
 
@@ -92,3 +97,6 @@ View the UIs at
 **Consol**
 
 [http://localhost:8500/ui](http://localhost:8500/ui).
+
+
+

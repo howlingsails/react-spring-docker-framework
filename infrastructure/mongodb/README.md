@@ -20,3 +20,14 @@ https://raw.githubusercontent.com/mongodb/docs/master/source/includes/steps-crea
 
 https://github.com/mongodb/docs/tree/master/source/includes
 
+# MongoDB
+
+## Goals
+
+[x] Replica set
+
+[ ] Set and Store Admin Password in Vault
+
+[ ] Vault plugin for user/password rotation
+
+[ ] Utilize in SpringBoot
