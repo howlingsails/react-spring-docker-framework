@@ -2,10 +2,7 @@
 
 # Summary
 
-Prototype implementation of a completed development framework
-
-
-
+Prototype implementation of a completed development framework with infrastructure
 
 # Key Goals
 
@@ -40,7 +37,7 @@ Vault provider several key features around secure communications
 
 ## Repeatability
 
-The ability to reproduce the clean development environment on demand
+The ability to reproduce the clean development environment on demand including the infrastructure.
 
 ## Constant Patching
 

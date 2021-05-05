@@ -7,6 +7,28 @@
 
 To have an internal CA Server to have two point cert validation for securing the authorization and authentication.
 
+## Notes
+
+Info I found on running Boulder
+
+[Running Boulder inside your organization](https://community.letsencrypt.org/t/run-boulder-inside-your-organization/23784/2)
+[Deploying Boulder in Production](https://community.letsencrypt.org/t/deploying-boulder-in-production/66486/6)
+
+Saw suggestion to not use Boulder but to use CFSSL 
+
+[Build your own public key infrastructure with CFSSL](https://blog.cloudflare.com/how-to-build-your-own-public-key
+-infrastructure/)
+
+[cfssl on github](https://github.com/cloudflare/cfssl)
+
+[CFSSL introduction](https://blog.cloudflare.com/introducing-cfssl/)
+
+[CFSSL DockerHub](https://hub.docker.com/r/cfssl/cfssl/)
+
+
+PAL secrets
+
+[pal-a-container-identity-bootstrapping-tool](https://blog.cloudflare.com/pal-a-container-identity-bootstrapping-tool/)
 
 ## Open Items
 

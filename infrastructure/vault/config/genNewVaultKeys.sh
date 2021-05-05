@@ -2,7 +2,7 @@
 #####################################
 #                PSA                #
 #####################################
-#  Breath, Take a deep breath in    #
+#  Breathe. Take a deep breath in   #
 #  Hold For a  couple seconds       #
 #  Tale a little more breath in     #
 #  Hold for a comfortable time      #
@@ -16,7 +16,7 @@ SECURITY_KEY_BIT_SIZE=8192
 # From example https://www.vaultproject.io/docs/platform/k8s/helm/examples/standalone-tls
 #
 # Gen
-openssl genrsa -out ./vault-key.pom ${SECURITY_KEY_BIT_SIZE}
+openssl genrsa -out ./vault-key.pem ${SECURITY_KEY_BIT_SIZE}
 
 CHECK_VAULT_KEY=`ls -alt ./vault-key.pem`
 CHECK_SUM_FOR_KEY_FILE=`cksum ./vault-key.pem`

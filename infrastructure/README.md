@@ -1,19 +1,5 @@
 # Application Infrastructure Build / Deploy
 
-## Services and work todo
-
-[x] Console ~high Available
-
-[x] Vault Since Service
-
-[  ] MongoDB High Available
-
-[  ] _Certificate Authority
-
-[  ] _SpringBoot Service
-
-[  ] _NextJS Web Framework
-
 ## Launching Infrastructure
 
 ```bash
@@ -99,4 +85,18 @@ View the UIs at
 [http://localhost:8500/ui](http://localhost:8500/ui).
 
 
+
+## Services and work todo
+
+[x] Console ~high Available
+
+[x] Vault Since Service
+
+[x] MongoDB High Available
+
+[  ] _Certificate Authority
+
+[  ] _SpringBoot Service
+
+[  ] _NextJS Web Framework
 
