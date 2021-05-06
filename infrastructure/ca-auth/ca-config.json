@@ -1,0 +1,16 @@
+{
+  "CN": "Howling Sails Studio",
+  "key": {
+    "algo": "rsa",
+    "size": 8192
+  },
+  "names": [
+    {
+      "C": "US",
+      "L": "San Francisco",
+      "O": "Howling Sails Studio",
+      "OU": "CA Services",
+      "ST": "California"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "signing": {
+    "default": {
+      "auth_key": "key234",
+      "expiry": "8760h",
+      "usages": [
+        "signing",
+        "key encipherment",
+        "server auth"
+      ]
+    }
+  },
+  "auth_keys": {
+    "key234": {
+      "notes": "Please change this key",
+      "key": "FE078BAF1267233",
+      "type": "standard"
+    }
+  }
+}

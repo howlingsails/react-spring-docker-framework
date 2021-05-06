@@ -2,6 +2,18 @@
 # https://github.com/compose-spec/compose-spec/blob/master/spec.md
 version: "3.8"
 services:
+  cfsll:
+    hostname: cfsll1
+    container_name: cert-auth1
+    image: cfssl/cfssl:1.5.0
+    expose:
+      - 8888
+    ports:
+      - 8888:8888
+    volumes:
+      - cfssl:/usr
+    #entrypoint: ["cfssl","serve","--help"]
+    entrypoint: ["cfssl","serve","-min-tls-version=1.2"]
   mongo1:
     hostname: mongo1
     container_name: localmongo1
@@ -169,6 +181,7 @@ volumes:
   mongo2:
   mongo3:
   consul:
+  cfssl:
 
 networks:
   mysqlcluster:
