@@ -7,14 +7,14 @@
 
 To have an internal CA Server to have two point cert validation for securing the authorization and authentication.
 
+## Configure your secure environment     
+
+
+
+
+
 ## Notes
 
-Info I found on running Boulder
-
-[Running Boulder inside your organization](https://community.letsencrypt.org/t/run-boulder-inside-your-organization/23784/2)
-[Deploying Boulder in Production](https://community.letsencrypt.org/t/deploying-boulder-in-production/66486/6)
-
-Saw suggestion to not use Boulder but to use CFSSL 
 
 [Build your own public key infrastructure with CFSSL](https://blog.cloudflare.com/how-to-build-your-own-public-key
 -infrastructure/)
@@ -25,6 +25,8 @@ Saw suggestion to not use Boulder but to use CFSSL
 
 [CFSSL DockerHub](https://hub.docker.com/r/cfssl/cfssl/)
 
+[Generate Self Signed certificates](https://kinvolk.io/docs/flatcar-container-linux/latest/setup/security/generate-self
+-signed-certificates/)
 
 PAL secrets
 

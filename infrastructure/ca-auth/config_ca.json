@@ -1,20 +1,30 @@
 {
+  "readme": " Taken from: https://github.com/cloudflare/cfssl/blob/master/doc/cmd/cfssl.txt",
   "signing": {
+    "profiles": {
+      "CA": {
+        "usages": ["cert sign"],
+        "expiry": "720h",
+        "auth_key": "ca-auth",
+        "remote": "localhost"
+      },
+      "email": {
+        "usages": ["s/mime"],
+        "expiry": "720h"
+      }
+    },
     "default": {
-      "auth_key": "key234",
-      "expiry": "8760h",
-      "usages": [
-        "signing",
-        "key encipherment",
-        "server auth"
-      ]
+      "usages": ["digital signature", "email protection"],
+      "expiry": "8000h"
     }
   },
   "auth_keys": {
-    "key234": {
-      "notes": "Please change this key",
-      "key": "FE078BAF1267233",
-      "type": "standard"
+    "ca-auth": {
+      "type":"standard",
+      "key":"0afddcd6eab74d169a5cbebdfd846bd5"
     }
+  },
+  "remotes": {
+    "localhost": "127.0.0.1:8888"
   }
 }

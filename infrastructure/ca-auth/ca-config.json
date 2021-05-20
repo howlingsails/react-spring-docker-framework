@@ -2,7 +2,7 @@
   "CN": "Howling Sails Studio",
   "key": {
     "algo": "rsa",
-    "size": 8192
+    "size": 4196
   },
   "names": [
     {
