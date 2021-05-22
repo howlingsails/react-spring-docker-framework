@@ -1,7 +1,4 @@
-# Boulder ACME CA
-
-[`This is an implementation of an ACME-based CA. The ACME protocol allows the CA to automatically verify that an applicant for a certificate actually controls an identifier, and allows domain holders to issue and revoke certificates for their domains. Boulder is the software that runs Let's Encrypt.`](https://porter.io/github.com/letsencrypt/boulder)
-
+# Cloud Foundry SSL CA Server and key automation
 
 ## Goals
 
