@@ -35,6 +35,11 @@ uuid()
 UUID=`uuid`
 echo "${UUID}"
 
+# stream config to new file replacing the auth key with newly generated UUID
 cat config_ca.json | sed 's/key\":\".*\"/key\":\"'"$UUID"'\"/' > config_ca.json.new
+
+# overwrite old file
 cp config_ca.json.new config_ca.json
+
+# delete new file
 rm  config_ca.json.new
