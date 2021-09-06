@@ -6,7 +6,22 @@ To have an internal CA Server to have two point cert validation for securing the
 
 ## Configure your secure environment     
 
+## Commands
 
+```
+# Example Sample clis for running cfssl server like entrypoint below.
+cfssl serve -min-tls-version=1.2 -loglevel 0 -ca-key=/app/cfssl/ca-key.pem -ca=/app/cfssl/ca.pem -config=/app/cfssl/config/config_ca.json
+
+# Example to get server command line
+cfssl server server --help
+
+# Example Generate self sign key
+cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=client client.json | cfssljson -bare client
+
+# Example Bulding cert  TODO: Still not sure this works.    
+cfssl bundle -cert ca.csr
+    
+```
 
 
 
@@ -21,6 +36,8 @@ To have an internal CA Server to have two point cert validation for securing the
 [CFSSL introduction](https://blog.cloudflare.com/introducing-cfssl/)
 
 [CFSSL DockerHub](https://hub.docker.com/r/cfssl/cfssl/)
+
+https://dev.to/stjohnjohnson/bring-your-own-certificate-authority-3gle
 
 [Generate Self Signed certificates](https://kinvolk.io/docs/flatcar-container-linux/latest/setup/security/generate-self
 -signed-certificates/)

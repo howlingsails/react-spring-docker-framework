@@ -2,18 +2,31 @@
 # https://github.com/compose-spec/compose-spec/blob/master/spec.md
 version: "3.8"
 services:
-  cfsll:
+  cfsll: #https://github.com/cloudflare/cfssl
     hostname: cfsll1
     container_name: cert-auth1
-    image: cfssl/cfssl:1.5.0
+    build:
+      context: ./ca-auth
+      dockerfile: Dockerfile
     expose:
       - 8888
     ports:
-      - 8888:8888
+      - 19888:8888
     volumes:
       - cfssl:/usr
-    #entrypoint: ["cfssl","serve","--help"]
-    entrypoint: ["cfssl","serve","-min-tls-version=1.2"]
+    entrypoint: ["cfssl",
+                 "serve",
+                 "-min-tls-version=1.2",
+                 "-loglevel=0",
+                 "-ca-key=/app/cfssl/ca-key.pem",
+                 "-ca=/app/cfssl/ca.pem",
+                 "-config=/app/cfssl/config/config_ca.json"
+    ]
+
+    # Just sample to understand the way you can run serve
+    # entrypoint: ["cfssl","serve","--help"]
+
+
   mongo1:
     hostname: mongo1
     container_name: localmongo1

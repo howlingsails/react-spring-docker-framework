@@ -4,7 +4,7 @@
 
 ```bash
 
-docker-compose up -d -V
+docker compose up -d -V
 
 ```
 
@@ -14,9 +14,7 @@ docker-compose up -d -V
 
 ```bash 
 
-docker-compose rm -s -v
-
-docker volume prune
+docker-compose rm -s -v &&  docker volume prune
 
 ```
 

@@ -37,7 +37,8 @@ Vault provider several key features around secure communications
 
 ## Repeatability
 
-The ability to reproduce the clean development environment on demand including the infrastructure.
+The ability to reproduce the clean development environment on demand including a full set of the infrastructure to
+ operate the application
 
 ## Constant Patching
 

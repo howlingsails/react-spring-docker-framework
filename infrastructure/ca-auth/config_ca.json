@@ -11,6 +11,23 @@
       "email": {
         "usages": ["s/mime"],
         "expiry": "720h"
+      },
+      "web-servers": {
+        "usages": [
+          "signing",
+          "key encipherment",
+          "server auth",
+          "client auth"
+        ],
+        "expiry": "8760h"
+      },
+      "server": {
+        "usages": [
+          "signing",
+          "digital signing",
+          "key encipherment",
+          "server auth"
+        ]
       }
     },
     "default": {
